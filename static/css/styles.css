@@ -10,7 +10,7 @@ body {
 /* Заголовок */
 h1 {
     text-align: center;
-    color: #007BFF;
+    color: #007BFF; /* Цвет заголовка */
 }
 
 /* Стили для списка постов */
@@ -20,16 +20,30 @@ ul {
 }
 
 li {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 15px;
+    background-color: #fff; /* Белый фон для поста */
+    border: 1px solid #ddd; /* Светло-серая граница */
+    border-radius: 5px; /* Закругленные углы */
+    margin-bottom: 10px; /* Отступ между постами */
+    padding: 15px; /* Внутренний отступ */
     transition: box-shadow 0.3s ease; /* Плавный переход для тени */
 }
 
 li:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+/* Заголовок поста в списке */
+li h2 {
+    margin: 0; /* Убираем отступы у заголовка */
+}
+
+li h2 a {
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    color: #007BFF; /* Цвет ссылки (такой же как у заголовка) */
+}
+
+li h2 a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
 
 /* Стили для формы выбора количества элементов на странице */
@@ -73,5 +87,4 @@ label {
 select {
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid #ddd; /* Граница выпадающего списка */
-}
+    border

@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ post.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>{{ post.title }}</h1>
-    <p>Автор: {{ post.author }}</p>
-    <p>Дата создания: {{ post.created_at }}</p>
-    <div>{{ post.content|linebreaks }}</div>
 
-    <a href="{% url 'post_list' %}">Назад к списку</a>
+<h1>{{ post.title }}</h1> <!-- Заголовок поста -->
+<p>Автор: {{ post.author }}</p>
+<p>Дата создания: {{ post.created_at }}</p>
+
+<div>{{ post.content|linebreaks }}</div> <!-- Отображаем полный текст с переносами -->
+
+<a href="{% url 'post_list' %}">Назад к списку</a> <!-- Ссылка назад к списку постов -->
+
 </body>
 </html>
