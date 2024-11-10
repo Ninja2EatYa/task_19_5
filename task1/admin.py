@@ -6,8 +6,8 @@ from task1.models import Post
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'created_at')  # поля для отображения в списке
-    search_fields = ('title', )  # поля для поиска
+    list_display = ('title', 'content', 'created_at')
+    search_fields = ('title', )
     list_per_page = 10
     fieldsets = (
         (None, {

@@ -21,7 +21,7 @@ def all_posts(request):
         'all_posts': Post.objects.all(),
         'page_posts': page_posts
     }
-    return render(request, 'base.html', context)
+    return render(request, 'task1/base.html', context)
 
 
 def post_list(request):
@@ -34,4 +34,4 @@ def post_list(request):
         page_posts = paginator.page(1)
     except EmptyPage:
         page_posts = paginator.page(paginator.num_pages)
-    return render(request, 'post_list.html', {'page_posts': page_posts})
+    return render(request, 'task1/post_list.html', {'page_posts': page_posts})
