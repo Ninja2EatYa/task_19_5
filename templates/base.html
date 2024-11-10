@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+        <h1> {{ page }} </h1>
+        {% endblock %}
+    </header>
+
+    <nav>
+        {% block menu %}
+        <p>
+            <a href="http://127.0.0.1:8000/posts/"><h2> Посты </h2></a>
+        </p>
+        <p>
+            <a href="http://127.0.0.1:8000/post_list/"><h2> Список постов </h2></a>
+        </p>
+        {% endblock %}
+    </nav>
+
+    <main>
+        {% block content %}
+        {% for post in all_posts %}
+        <p>{{ post.title }} | {{ post.created_at }} </p>
+        <p>{{ post.content }}</p>
+        {% endfor %}
+        {% endblock %}
+    </main>
+</body>
+</html>
