@@ -16,5 +16,5 @@ def post_list(request):
 
 
 def post_detail(request, pk):
-    post = get_object_or_404(Post, pk=pk)  # Получаем пост по его первичному ключу
+    post = get_object_or_404(Post, pk=pk)
     return render(request, 'task5/post_detail.html', {'post': post})

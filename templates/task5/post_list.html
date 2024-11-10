@@ -18,7 +18,7 @@
 
         {% for num in page_obj.paginator.page_range %}
             {% if num == page_obj.number %}
-                <a class="active">{{ num }}</a>  <!-- Текущая страница -->
+                <a class="active">{{ num }}</a>
             {% else %}
                 <a href="?page={{ num }}&items_per_page={{ page_obj.paginator.per_page }}">{{ num }}</a>
             {% endif %}
